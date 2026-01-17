@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy 1 Month ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h1>Happy 1 Month Anniversary! 💖</h1>
+    <p>It’s been an amazing month with you. Every moment with you feels special 🥰</p>
+
+    <div class="photo">
+      <img src="images/us.jpg" alt="Us Together">
+    </div>
+
+    <p>Thank you for being my everything. Here’s to many more months and memories together! 💘</p>
+  </div>
+
+  <!-- Floating Hearts -->
+  <script>
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 20 + 15 + "px";
+      document.body.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 6000);
+    }, 300);
+  </script>
+
+</body>
+</html>
