@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our First Memory 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <h1> The Moment you made it official ❤️</h1>
+  <p>Remember my disbelief , it lasted for weeks . Because ik how lovable , pretty , gorgeous you are .🥰</p>
+
+  <div class="photos">
+    <img src="images/photo1.jpg" alt="First memory">
+  </div>
+
+  <button onclick="goToPage2()">Next ➡️</button>
+  <button onclick="goHome()">Home 🏠</button>
+</div>
+
+<script>
+  function goToPage2() { window.location.href = "page2.html"; }
+  function goHome() { window.location.href = "index.html"; }
+
+  // Floating hearts
+  setInterval(() => {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+  }, 300);
+</script>
+
+</body>
+</html>
