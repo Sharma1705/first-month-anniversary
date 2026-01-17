@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Forever Us 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <h1> Our dance practisee ❤️</h1>
+  <p> The most recent and most beautiful date of ours. The photos , the fitcheck and everything it is special🥰 </p>
+
+  <div class="photos">
+    <img src="images/photo3.jpg" alt="Third memory">
+  </div>
+
+  <button onclick="goHome()">Back Home 🏠</button>
+</div>
+
+<script>
+  function goHome() { window.location.href = "index.html"; }
+
+  setInterval(() => {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+  }, 300);
+</script>
+
+</body>
+</html>
