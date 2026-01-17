@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Special Moment 💖</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+  <h1>That first datee 🥰</h1>
+  <p> Every moment from that dayy still bring me butterflies. That date went well except from that silence for a while and our awkwardness ❤️</p>
+
+  <div class="photos">
+    <img src="images/photo2.jpg" alt="Second memory">
+  </div>
+
+  <button onclick="goToPage3()">Next ➡️</button>
+  <button onclick="goHome()">Home 🏠</button>
+</div>
+
+<script>
+  function goToPage3() { window.location.href = "page3.html"; }
+  function goHome() { window.location.href = "index.html"; }
+
+  setInterval(() => {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 15 + "px";
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+  }, 300);
+</script>
+
+</body>
+</html>
